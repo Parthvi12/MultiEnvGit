@@ -29,12 +29,12 @@
             {
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
               "borderColor": "#E0DEDE",
-              "onSort": "{{\n            Select_public_configs1.run();\n            Total_record_public_configs1.run();\n          }}",
+              "onSort": "{{\n            Select_public_configs2.run();\n            Total_record_public_configs2.run();\n          }}",
               "isVisibleDownload": false,
               "iconSVG": "/static/media/icon.24905525921dd6f5ff46d0dd843b9e12.svg",
               "topRow": 9,
               "isSortable": true,
-              "onPageChange": "{{\n            Select_public_configs1.run();\n            Total_record_public_configs1.run();\n          }}",
+              "onPageChange": "{{\n            Select_public_configs2.run();\n            Total_record_public_configs2.run();\n          }}",
               "type": "TABLE_WIDGET_V2",
               "inlineEditingSaveOption": "ROW_LEVEL",
               "animateLoading": true,
@@ -82,7 +82,7 @@
               "isVisible": true,
               "enableClientSideSearch": true,
               "version": 2,
-              "totalRecordsCount": "{{Total_record_public_configs1.data[0].count}}",
+              "totalRecordsCount": "{{Total_record_public_configs2.data[0].count}}",
               "isLoading": false,
               "childStylesheet": {
                 "button": {
@@ -311,7 +311,7 @@
               "textSize": "0.875rem",
               "widgetId": "c5pf9xcfg5",
               "minWidth": 450,
-              "tableData": "{{Select_public_configs1.data}}",
+              "tableData": "{{Select_public_configs2.data}}",
               "label": "Data",
               "searchKey": "",
               "parentId": "0",
@@ -330,8 +330,8 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Page1_Select_public_configs1",
-              "name": "Select_public_configs1",
+              "id": "Page1_Select_public_configs2",
+              "name": "Select_public_configs2",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
@@ -342,8 +342,8 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_Total_record_public_configs1",
-              "name": "Total_record_public_configs1",
+              "id": "Page1_Total_record_public_configs2",
+              "name": "Total_record_public_configs2",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],

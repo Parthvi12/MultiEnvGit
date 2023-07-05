@@ -26,7 +26,7 @@
         }
       ]
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -44,7 +44,7 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-07-04T11:40:05Z"
+    "createdAt": "2023-07-04T11:42:50Z"
   },
   "id": "Page1_Select_public_configs1",
   "deleted": false,
