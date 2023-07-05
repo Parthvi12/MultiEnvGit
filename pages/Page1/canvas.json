@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 380,
+          "bottomRow": 690,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -29,16 +29,17 @@
             {
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
               "borderColor": "#E0DEDE",
-              "onSort": "{{\n            Select_public_configs2.run();\n            Total_record_public_configs2.run();\n          }}",
-              "isVisibleDownload": false,
+              "isVisibleDownload": true,
               "iconSVG": "/static/media/icon.24905525921dd6f5ff46d0dd843b9e12.svg",
-              "topRow": 9,
+              "topRow": 36,
               "isSortable": true,
-              "onPageChange": "{{\n            Select_public_configs2.run();\n            Total_record_public_configs2.run();\n          }}",
               "type": "TABLE_WIDGET_V2",
               "inlineEditingSaveOption": "ROW_LEVEL",
               "animateLoading": true,
               "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
                 {
                   "key": "accentColor"
                 },
@@ -49,32 +50,29 @@
                   "key": "boxShadow"
                 },
                 {
-                  "key": "tableData"
+                  "key": "primaryColumns.API.computedValue"
                 },
                 {
-                  "key": "totalRecordsCount"
+                  "key": "primaryColumns.Description.computedValue"
                 },
                 {
-                  "key": "primaryColumns.id.computedValue"
+                  "key": "primaryColumns.Auth.computedValue"
                 },
                 {
-                  "key": "primaryColumns.configName.computedValue"
+                  "key": "primaryColumns.HTTPS.computedValue"
                 },
                 {
-                  "key": "primaryColumns.configJson.computedValue"
+                  "key": "primaryColumns.Cors.computedValue"
                 },
                 {
-                  "key": "primaryColumns.configVersion.computedValue"
+                  "key": "primaryColumns.Link.computedValue"
                 },
                 {
-                  "key": "primaryColumns.updatedAt.computedValue"
-                },
-                {
-                  "key": "primaryColumns.updatedBy.computedValue"
+                  "key": "primaryColumns.Category.computedValue"
                 }
               ],
               "needsHeightForContent": true,
-              "leftColumn": 0,
+              "leftColumn": 4,
               "delimiter": ",",
               "defaultSelectedRowIndex": 0,
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -82,7 +80,7 @@
               "isVisible": true,
               "enableClientSideSearch": true,
               "version": 2,
-              "totalRecordsCount": "{{Total_record_public_configs2.data[0].count}}",
+              "totalRecordsCount": 0,
               "isLoading": false,
               "childStylesheet": {
                 "button": {
@@ -108,51 +106,46 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "columnUpdatedAt": 1688470807027,
+              "columnUpdatedAt": 1688550811290,
               "defaultSelectedRowIndices": [
                 0
               ],
-              "mobileBottomRow": 37,
-              "widgetName": "Table1",
+              "mobileBottomRow": 66,
+              "widgetName": "Table2",
               "defaultPageSize": 0,
               "columnOrder": [
-                "id",
-                "configName",
-                "configJson",
-                "configVersion",
-                "updatedAt",
-                "updatedBy"
+                "API",
+                "Description",
+                "Auth",
+                "HTTPS",
+                "Cors",
+                "Link",
+                "Category"
               ],
               "dynamicPropertyPathList": [],
               "displayName": "Table",
-              "bottomRow": 37,
+              "bottomRow": 69,
               "columnWidthMap": {},
               "parentRowSpace": 10,
               "hideCard": false,
-              "mobileRightColumn": 30,
-              "parentColumnSpace": 17.9375,
-              "dynamicTriggerPathList": [
-                {
-                  "key": "onPageChange"
-                },
-                {
-                  "key": "onSort"
-                }
-              ],
+              "mobileRightColumn": 34,
+              "dynamicTriggerPathList": [],
               "borderWidth": "1",
               "primaryColumns": {
-                "id": {
+                "API": {
                   "allowCellWrapping": false,
                   "allowSameOptionsInNewRow": true,
                   "index": 0,
                   "width": 150,
-                  "originalId": "id",
-                  "id": "id",
-                  "alias": "id",
+                  "originalId": "API",
+                  "id": "API",
+                  "alias": "API",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
-                  "columnType": "number",
+                  "columnType": "text",
+                  "textColor": "",
                   "textSize": "0.875rem",
+                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
@@ -161,25 +154,28 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "id",
+                  "label": "API",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"API\"]))}}",
                   "sticky": "",
-                  "validation": {}
+                  "validation": {},
+                  "cellBackground": ""
                 },
-                "configName": {
+                "Description": {
                   "allowCellWrapping": false,
                   "allowSameOptionsInNewRow": true,
                   "index": 1,
                   "width": 150,
-                  "originalId": "configName",
-                  "id": "configName",
-                  "alias": "configName",
+                  "originalId": "Description",
+                  "id": "Description",
+                  "alias": "Description",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
+                  "textColor": "",
                   "textSize": "0.875rem",
+                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
@@ -188,25 +184,28 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "configName",
+                  "label": "Description",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"configName\"]))}}",
+                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Description\"]))}}",
                   "sticky": "",
-                  "validation": {}
+                  "validation": {},
+                  "cellBackground": ""
                 },
-                "configJson": {
+                "Auth": {
                   "allowCellWrapping": false,
                   "allowSameOptionsInNewRow": true,
                   "index": 2,
                   "width": 150,
-                  "originalId": "configJson",
-                  "id": "configJson",
-                  "alias": "configJson",
+                  "originalId": "Auth",
+                  "id": "Auth",
+                  "alias": "Auth",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
+                  "textColor": "",
                   "textSize": "0.875rem",
+                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
@@ -215,25 +214,28 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "configJson",
+                  "label": "Auth",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"configJson\"]))}}",
+                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Auth\"]))}}",
                   "sticky": "",
-                  "validation": {}
+                  "validation": {},
+                  "cellBackground": ""
                 },
-                "configVersion": {
+                "HTTPS": {
                   "allowCellWrapping": false,
                   "allowSameOptionsInNewRow": true,
                   "index": 3,
                   "width": 150,
-                  "originalId": "configVersion",
-                  "id": "configVersion",
-                  "alias": "configVersion",
+                  "originalId": "HTTPS",
+                  "id": "HTTPS",
+                  "alias": "HTTPS",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
-                  "columnType": "number",
+                  "columnType": "checkbox",
+                  "textColor": "",
                   "textSize": "0.875rem",
+                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
@@ -242,25 +244,28 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "configVersion",
+                  "label": "HTTPS",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"configVersion\"]))}}",
+                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"HTTPS\"]))}}",
                   "sticky": "",
-                  "validation": {}
+                  "validation": {},
+                  "cellBackground": ""
                 },
-                "updatedAt": {
+                "Cors": {
                   "allowCellWrapping": false,
                   "allowSameOptionsInNewRow": true,
                   "index": 4,
                   "width": 150,
-                  "originalId": "updatedAt",
-                  "id": "updatedAt",
-                  "alias": "updatedAt",
+                  "originalId": "Cors",
+                  "id": "Cors",
+                  "alias": "Cors",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
+                  "textColor": "",
                   "textSize": "0.875rem",
+                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
@@ -269,25 +274,28 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "updatedAt",
+                  "label": "Cors",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"updatedAt\"]))}}",
+                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Cors\"]))}}",
                   "sticky": "",
-                  "validation": {}
+                  "validation": {},
+                  "cellBackground": ""
                 },
-                "updatedBy": {
+                "Link": {
                   "allowCellWrapping": false,
                   "allowSameOptionsInNewRow": true,
                   "index": 5,
                   "width": 150,
-                  "originalId": "updatedBy",
-                  "id": "updatedBy",
-                  "alias": "updatedBy",
+                  "originalId": "Link",
+                  "id": "Link",
+                  "alias": "Link",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
+                  "textColor": "",
                   "textSize": "0.875rem",
+                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
@@ -296,28 +304,58 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "updatedBy",
+                  "label": "Link",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"updatedBy\"]))}}",
+                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Link\"]))}}",
                   "sticky": "",
-                  "validation": {}
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "Category": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 6,
+                  "width": 150,
+                  "originalId": "Category",
+                  "id": "Category",
+                  "alias": "Category",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Category",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Category\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
                 }
               },
-              "key": "4ydbp45vlc",
+              "key": "4vfngaw4bc",
               "canFreezeColumn": true,
               "isDeprecated": false,
-              "rightColumn": 30,
+              "rightColumn": 46,
               "textSize": "0.875rem",
-              "widgetId": "c5pf9xcfg5",
+              "widgetId": "uxe5a9lm5v",
               "minWidth": 450,
-              "tableData": "{{Select_public_configs2.data}}",
+              "tableData": "{{Api1.data.entries}}",
               "label": "Data",
               "searchKey": "",
               "parentId": "0",
-              "serverSidePaginationEnabled": true,
               "renderMode": "CANVAS",
-              "mobileTopRow": 9,
+              "mobileTopRow": 38,
               "horizontalAlignment": "LEFT",
               "isVisibleSearch": true,
               "responsiveBehavior": "fill",
@@ -330,22 +368,10 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Page1_Select_public_configs2",
-              "name": "Select_public_configs2",
+              "id": "Page1_Api1",
+              "name": "Api1",
               "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "Table1.sortOrder.column ? \"ORDER BY \" + Table1.sortOrder.column + \"  \" + (Table1.sortOrder.order !== \"desc\" ? \"\" : \"DESC\") : \"\"",
-                "Table1.pageSize",
-                "Table1.pageOffset"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_Total_record_public_configs2",
-              "name": "Total_record_public_configs2",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
+              "pluginType": "API",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
